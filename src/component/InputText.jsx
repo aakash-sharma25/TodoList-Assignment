@@ -6,6 +6,8 @@ export default function InputText() {
   const [inputText, setInputText] = useState("");
   const dispatch = useDispatch();
 
+  //Adding todo - using addtodo function to update the state 
+
   const addTodoHandler = () => {
     if (inputText.trim() === "") {
       setInputText("");
@@ -14,7 +16,9 @@ export default function InputText() {
     }
     dispatch(addTodo(inputText));
     setInputText("");
+
   };
+  
   return (
     <div className="w-full items-center justify-center mt-10 flex gap-5">
       <input

@@ -6,6 +6,7 @@ export const todoSlice = createSlice({
   },
   name: "todo",
   reducers: {
+    //add to do  reducer
     addTodo: (state, action) => {
       const todo = {
         id: nanoid(),
@@ -15,10 +16,12 @@ export const todoSlice = createSlice({
       state.todos.push(todo);
       localStorage.setItem("allTodos", JSON.stringify(state.todos));
     },
+    // remove todo reducer
     removeTodo: (state, action) => {
       state.todos = state.todos.filter((t) => t.id !== action.payload);
       localStorage.setItem("allTodos", JSON.stringify(state.todos));
     },
+    // changing the todo status using id
     changeTodoStatus: (state, action) => {
       state.todos = state.todos.map((todo) => {
         if (todo.id === action.payload) {

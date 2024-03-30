@@ -8,6 +8,8 @@ import { restoreTodo } from "./redux/slices/todoSlice";
 function App() {
   const dispatch = useDispatch();
 
+  //fetching the todos from local storage
+  
   useEffect(() => {
     const allTodos = localStorage.getItem("allTodos");
     if (allTodos) {

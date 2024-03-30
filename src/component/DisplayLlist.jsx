@@ -5,6 +5,9 @@ import { FaCheck } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 
 export default function DisplayLlist() {
+
+  //fetching the todo form the redux store
+
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
@@ -43,33 +46,5 @@ export default function DisplayLlist() {
         })}
       </div>
     </>
-    // <div className=" flex gap-3 flex-col items-center">
-    //   <h1 className=" text-xl font-bold">All todos</h1>
-    //   <div className=" flex flex-col gap-3 items-center justify-center">
-    //     {/* {todos?.map((todo) => {
-    //       return (
-    //         <>
-    //           <p
-    //             key={todos?.id}
-    //             className=" w-[60%] p-3  shadow-blue-300 shadow-md"
-    //           >
-    //             {todo?.text}
-    //           </p>
-    //           <div>
-    //             <button
-    //               onClick={() => console.log(todos)}
-    //               className=" ml-2 py-2 px-3 bg-red-600 rounded-md  text-white"
-    //             >
-    //               Show
-    //             </button>
-    //             <button className=" ml-2 py-2 px-3 bg-red-600 rounded-md  text-white">
-    //               sldj
-    //             </button>
-    //           </div>
-    //         </>
-    //       );
-    //     })} */}
-    //   </div>
-    // </div>
   );
 }
