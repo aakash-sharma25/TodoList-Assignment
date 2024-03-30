@@ -9,7 +9,7 @@ function App() {
   const dispatch = useDispatch();
 
   //fetching the todos from local storage
-  
+
   useEffect(() => {
     const allTodos = localStorage.getItem("allTodos");
     if (allTodos) {
@@ -22,7 +22,7 @@ function App() {
         className=" flex flex-col items-center 
         justify-center  w-[100vw] gap-5"
       >
-        <h1 className=" text-2xl font-bold text-green-700 mt-10">TODO LIST</h1>
+        <h1 className=" text-2xl font-bold text-black mt-10">TODO LIST</h1>
         <InputText />
         <DisplayLlist />
       </div>
