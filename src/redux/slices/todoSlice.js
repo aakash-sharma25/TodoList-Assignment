@@ -13,7 +13,6 @@ export const todoSlice = createSlice({
         completed: false,
       };
       state.todos.push(todo);
-      // state.todos = [...state.todos, todo];
       localStorage.setItem("allTodos", JSON.stringify(state.todos));
     },
     removeTodo: (state, action) => {

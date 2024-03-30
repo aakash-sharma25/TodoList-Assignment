@@ -9,6 +9,7 @@ export default function InputText() {
   const addTodoHandler = () => {
     if (inputText.trim() === "") {
       setInputText("");
+      alert("No input");
       return;
     }
     dispatch(addTodo(inputText));
